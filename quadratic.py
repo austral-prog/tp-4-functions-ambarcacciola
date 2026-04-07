@@ -39,4 +39,4 @@ def derivation(a, b, c):
         derivada = f"f'(x) = {b}"
     elif b == 0:
         derivada = f"f'(x) = {2*a} * X"
-    return derivada"ANSWER HERE"
+    return derivada
