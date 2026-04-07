@@ -11,15 +11,16 @@ def is_positive(n):
 # ---- Función a implementar ----
 
 def classify_number(n):
-    """
-    Dado un número entero n, retorna un string que lo clasifica.
-    Debe USAR las funciones is_even e is_positive para resolver el ejercicio.
-
-    Clasificaciones posibles:
-      - "positive even"   (positivo y par)
-      - "positive odd"    (positivo e impar)
-      - "negative even"   (negativo y par)
-      - "negative odd"    (negativo e impar)
-      - "zero"            (el número es 0)
-    """
-    return "ANSWER HERE"  # Remove this line and implement
+    if n == 0:
+        ans = f"zero"
+    elif is_positive(n):
+        if is_even(n):
+            ans = f"positive even"
+        else:
+            ans = f"positive odd"
+    else:
+        if is_even(n):
+            ans = f"negative even"
+        else:
+            ans = f"negative odd"
+    return ans
